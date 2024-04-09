@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Lumos Light</string>
+    <string name="app_name_desc">Instant Light, Any Time, Anywhere</string>
+    <string name="sos">SOS</string>
+    <string name="lets_get_started">Let\'s Begin</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="about_us">About us</string>
+    <string name="color_display">Color Lights</string>
+    <string name="home">Home</string>
+    <string name="setting">Setting</string>
+    <string name="exit">Exit</string>
+    <string name="exit_desc">Are you sure you want to exit Lumos Light?</string>
+    <string name="action_no">No</string>
+    <string name="action_yes">Yes</string>
+    <string name="timer">Count Down Timer</string>
+
+    <string name="change_theme">App Theme</string>
+    <string name="dark">Dark</string>
+    <string name="light">Light</string>
+
+    <string name="privacy_policy_url">https://sites.google.com/view/lumos-light-privacy-policy/home</string>
+    <string name="about_us_url">https://sites.google.com/view/lumos-light-about/home</string>
+</resources>

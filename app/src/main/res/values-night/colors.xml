@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FCC144</color>
+    <color name="colorPrimaryDark">#FD9A1D</color>
+    <color name="colorAccent">#FBAB03</color>
+    <color name="colorLightPrimary">#FF03DAC5</color>
+    <color name="colorSecondary">#FF018786</color>
+    <color name="backgroundColor">#FF000000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="iconColor">#FFFFFFFF</color>
+    <color name="colorBtn">#FCC144</color>
+
+    <color name="dialog">#131313</color>
+
+    <color name="textColor">#FFFFFFFF</color>
+    <color name="secondary_text">#959393</color>
+    <color name="btnColor">#956501</color>
+    <color name="btnTextColor">#FFFFFFFF</color>
+
+    <color name="flash_off">#FFFFFFFF</color>
+    <color name="flash_on">#FFC107</color>
+
+    <color name="light_blue_50">#FFE1F5FE</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+</resources>

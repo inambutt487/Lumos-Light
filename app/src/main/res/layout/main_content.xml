@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/backgroundColor"
+        android:elevation="2dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="30dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/iv_menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_menu_border"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.mursaat.extendedtextview.AnimatedGradientTextView
+            android:id="@+id/splashTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            app:colors="@array/funny_colors"
+            app:angle="45"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_menu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.8"
+            app:maxFPS="30"
+            app:simultaneousColors="15"
+            app:speed="100" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <fragment
+        android:id="@+id/nav_host_fragment_activity_main"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="2dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cl_bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_toolbar"
+        app:navGraph="@navigation/navigation" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cl_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"
+            app:elevation="2dp"
+            app:fabAlignmentMode="center"
+            app:fabCradleMargin="14dp"
+            app:fabCradleVerticalOffset="0dp"
+            app:hideOnScroll="true"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_nav_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingBottom="-8dp"
+                android:theme="@style/BottomNavigationTheme"
+                app:elevation="0dp"
+                app:itemRippleColor="@null"
+                app:labelVisibilityMode="labeled"
+                app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+                app:menu="@menu/bottom_navigation" />
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnDisplayColor"
+            android:layout_width="58dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/colorBtn"
+            android:layout_marginBottom="55dp"
+            android:scaleType="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_color"
+            app:layout_anchor="@id/bottom_app_bar"
+            app:layout_anchorGravity="center"
+            app:maxImageSize="50dp"
+            app:tint="@null" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

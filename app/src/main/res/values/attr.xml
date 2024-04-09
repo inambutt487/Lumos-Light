@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="funny_colors">
+        <item>#FFAB15</item>
+        <item>#FF9400</item>
+        <item>#FFDC40</item>
+        <item>#BEE548</item>
+        <item>#39E5D0</item>
+        <item>#39E5D0</item>
+        <item>#00C3FF</item>
+        <item>#00AAF0</item>
+        <item>#00AAF0</item>
+        <item>#CD67E5</item>
+        <item>#A056B2</item>
+        <item>#FF5AD4</item>
+        <item>#FF5AD4</item>
+        <item>#FF26BE</item>
+        <item>#FF6849</item>
+        <item>#FD4B2D</item>
+    </array>
+</resources>

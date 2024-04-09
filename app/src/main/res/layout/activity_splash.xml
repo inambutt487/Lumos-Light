@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.StartScreenActivity">
+
+    <ImageView
+        android:id="@+id/splashIcon"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon" />
+
+    <com.mursaat.extendedtextview.AnimatedGradientTextView
+        android:id="@+id/splashTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textSize="42sp"
+        android:textFontWeight="800"
+        app:angle="45"
+        app:colors="@array/funny_colors"
+        app:layout_constraintEnd_toEndOf="@+id/splashIcon"
+        app:layout_constraintStart_toStartOf="@+id/splashIcon"
+        app:layout_constraintTop_toBottomOf="@+id/splashIcon"
+        app:maxFPS="30"
+        app:simultaneousColors="15"
+        app:speed="100" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_lets_get_started"
+        style="@style/lets_get_started"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_shape"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/lets_get_started"
+        android:textAllCaps="false"
+        android:textColor="@color/btnTextColor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splashTitle"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <TextView
+        android:id="@+id/tv_privacy_policy"
+        style="@style/privacy_policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/privacy_policy"
+        android:textSize="14sp"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toEndOf="@+id/btn_lets_get_started"
+        app:layout_constraintStart_toStartOf="@+id/btn_lets_get_started"
+        app:layout_constraintTop_toBottomOf="@+id/btn_lets_get_started" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <ImageView
+        android:id="@+id/iconFlash"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_flashlight_off" />
+
+
+    <TextView
+        android:id="@+id/icon_sos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:text="@string/sos"
+        android:textAlignment="center"
+        android:textColor="@color/btnTextColor"
+        android:textSize="36sp"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintEnd_toEndOf="@+id/iconFlash"
+        app:layout_constraintStart_toStartOf="@+id/iconFlash"
+        app:layout_constraintTop_toBottomOf="@+id/iconFlash" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

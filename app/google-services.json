@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "221590071876",
+    "project_id": "lumos-light",
+    "storage_bucket": "lumos-light.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221590071876:android:3629617e521a2279ae2a11",
+        "android_client_info": {
+          "package_name": "com.lumoslight.flashlight"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDx8Px4BRaYBVgdgar6stspgTvjObPMNxA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

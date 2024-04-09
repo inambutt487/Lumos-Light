@@ -1,0 +1,98 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+
+    id 'kotlin-kapt'
+
+    //Navigation Data
+    id("androidx.navigation.safeargs")
+
+
+    //Firebase
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'kotlin-parcelize'
+}
+
+android {
+    namespace 'com.lumoslight.flashlight'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.lumoslight.flashlight"
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+        def date = new Date()
+        def formattedDate = date.format('dd-MMM-yyyy')
+        setProperty("archivesBaseName", "Lumos Light" + "-v" + versionCode + "-" + formattedDate)
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug() {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:$core_ktx_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    implementation "androidx.legacy:legacy-support-v4:$support_legacy_version"
+
+    implementation "androidx.core:core-splashscreen:$splashscreen_version"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$live_data_view_model_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$live_data_view_model_version"
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version_version"
+
+    //View Model
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$live_data_view_model_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_extensions_version"
+
+    implementation platform("com.google.firebase:firebase-bom:$firebase_version")
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+
+    //Review App
+    implementation "com.google.android.play:core:$play_core_version"
+    implementation "com.google.android.play:core-ktx:$play_core_ktx_version"
+
+    implementation 'com.github.Mursaat:AnimatedGradientTextView:v0.0.6'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
